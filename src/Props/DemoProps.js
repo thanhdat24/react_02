@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import Parent from './Parent'
+import DanhSachSanPham from "./DanhSachSanPham";
+import Parent from "./Parent";
 
 export default class DemoProps extends Component {
-    render() {
-        return (
-            <div>
-             <Parent />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <Parent>
+            <DanhSachSanPham/>
+        </Parent>
+      </div>
+    );
+  }
 }

@@ -1,6 +1,9 @@
 import "./App.css";
 
 import DanhSachSanPham from "./Props/DanhSachSanPham";
+import DemoProps from "./Props/DemoProps";
+import ExerciseCart from "./Props/ExerciseCart/ExerciseCart";
+import ExerclseCarStore from "./Props/ExerclseCarStore/ExerclseCarStore";
 // import ProductList from "./Props/ProductList";
 // import DemoProps from "./Props/DemoProps";
 import React from "react";
@@ -10,7 +13,12 @@ import React from "react";
 function App() {
   return (
     <div>
-      <DanhSachSanPham/>
+      {/* <DanhSachSanPham/> */}
+      {/* <ExerclseCarStore /> */}
+
+      {/* <DemoProps /> */}
+
+      <ExerciseCart />
     </div>
     // <div className="container-fluid">
     //   {/* <DemoProps/> */}
