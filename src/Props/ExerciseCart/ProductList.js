@@ -24,7 +24,7 @@ export default class ProductList extends Component {
     return this.mangSanPham.map((sanpham, index) => {
       return (
         <div className="col-4" key={index}>
-          <ProductItem xemChiTiet={this.xemChiTiet} sanPhamProps={sanpham} />
+          <ProductItem themGioHang={this.props.themGioHang} xemChiTiet={this.xemChiTiet} sanPhamProps={sanpham} />
         </div>
       );
     });

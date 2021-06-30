@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Child from "./Child";
+// import Child from "./Child";
 
 // import ChildFunctional from "./ChildFunctional";
 
