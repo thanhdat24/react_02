@@ -52,10 +52,41 @@ class GioHangRedux extends Component {
                             />
                           </th>
                           <th>{spGH.tenSP}</th>
-                          <th>{spGH.soLuong}</th>
+                          <th>
+                            <button
+                              style={{ padding: 7 }}
+                              onClick={() => {
+                                this.props.tangGiamSoLuong(spGH.maSP, true);
+                              }}
+                              class="btn btn-success"
+                            >
+                              +
+                            </button>
+                            {spGH.soLuong}
+                            <button
+                              style={{ padding: 7 }}
+                              onClick={() => {
+                                this.props.tangGiamSoLuong(spGH.maSP, false);
+                              }}
+                              class="btn btn-success"
+                            >
+                              -
+                            </button>
+                          </th>
+
                           <th>{spGH.giaBan.toLocaleString()}</th>
                           <th>
                             {(spGH.soLuong * spGH.giaBan).toLocaleString()}
+                          </th>
+                          <th>
+                            <button
+                              onClick={() => {
+                                this.props.xoaGioiHang(spGH.maSP);
+                              }}
+                              class="btn btn-danger"
+                            >
+                              Xóa
+                            </button>
                           </th>
                         </tr>
                       );
@@ -65,7 +96,14 @@ class GioHangRedux extends Component {
                     <tr>
                       <td colSpan="5"></td>
                       <td>Tổng Tiền</td>
-                      <td></td>
+                      <td>
+                        {this.props.gioHang
+                          .reduce((tongTien, spGioHang, index) => {
+                            return (tongTien +=
+                              spGioHang.soLuong * spGioHang.giaBan);
+                          }, 0)
+                          .toLocaleString()}
+                      </td>
                     </tr>
                   </tfoot>
                 </table>
@@ -93,4 +131,32 @@ const mapStateToProps = (state) => {
     gioHang: state.stateGioHang.gioHang,
   };
 };
-export default connect(mapStateToProps)(GioHangRedux);
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    xoaGioiHang: (maSP) => {
+      // Tạo action
+      let action = {
+        type: "XOA_GIO_HANG",
+        maSP,
+      };
+
+      // Dùng phương thức dispatch từ redux => gửi dữ liệu lên reducer
+      // console.log(maSP);
+      dispatch(action);
+    },
+
+    tangGiamSoLuong: (maSP, tangGiam) => {
+      // tang = true, giam = false
+      let action = {
+        type: "TANG_GIAM_SO_LUONG",
+        maSP,
+        tangGiam,
+      };
+
+      // Đưa action lên reducer mỗi lần người dùng click vào
+      dispatch(action);
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(GioHangRedux);
