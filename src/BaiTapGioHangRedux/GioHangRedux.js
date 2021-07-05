@@ -31,12 +31,12 @@ class GioHangRedux extends Component {
                 <table class="table">
                   <thead>
                     <tr className="p-5">
-                      <th>Mã sản phẩm</th>
-                      <th>Hình ảnh</th>
-                      <th>Tên sản phẩm</th>
-                      <th>Số lượng</th>
-                      <th>Đơn giá</th>
-                      <th>Thành tiền</th>
+                      <th style={{ whiteSpace: "nowrap" }}>Mã sản phẩm</th>
+                      <th style={{ whiteSpace: "nowrap" }}>Hình ảnh</th>
+                      <th style={{ whiteSpace: "nowrap" }}>Tên sản phẩm</th>
+                      <th style={{ whiteSpace: "nowrap" }}>Số lượng</th>
+                      <th style={{ whiteSpace: "nowrap" }}>Đơn giá</th>
+                      <th style={{ whiteSpace: "nowrap" }}>Thành tiền</th>
                     </tr>
                   </thead>
                   <tbody>
