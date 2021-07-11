@@ -48,7 +48,7 @@ const mapDispatchToProps = (dispatch) => {
       };
 
       // Dùng hàm dispatch từ redux => gửi dữ liệu lên reducer
-      dispatch(action)
+      dispatch(action);
     },
   };
 };
