@@ -23,7 +23,7 @@ const BaiTapGioHangReducer = (state = stateGioHang, action) => {
 
         return { ...state };
       }
-      break;
+  
 
     case "XOA_GIO_HANG":
       {
@@ -37,7 +37,7 @@ const BaiTapGioHangReducer = (state = stateGioHang, action) => {
         state.gioHang = gioHangCapNhap;
         return { ...state };
       }
-      break;
+      
     case "TANG_GIAM_SO_LUONG":
       {
         let gioHangCapNhap = [...state.gioHang];
@@ -59,7 +59,7 @@ const BaiTapGioHangReducer = (state = stateGioHang, action) => {
         state.gioHang = gioHangCapNhap;
         return { ...state };
       }
-      break;
+     
     default:
       return { ...state };
   }
