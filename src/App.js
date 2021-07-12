@@ -1,7 +1,8 @@
 import "./App.css";
 
+import ContextDemo from "./ContextDemo/ContextDemo";
 // import BaiTapGioHangRedux from "./BaiTapGioHangRedux/BaiTapGioHangRedux";
-import DemoPureComponent from "./DemoPureComponent/DemoPureComponent";
+// import DemoPureComponent from "./DemoPureComponent/DemoPureComponent";
 // import DanhSachSanPham from "./Props/DanhSachSanPham";
 // import DemoProps from "./Props/DemoProps";
 // import ExerciseCart from "./Props/ExerciseCart/ExerciseCart";
@@ -23,7 +24,8 @@ function App() {
       {/* <ExerciseCart /> */}
 
       {/* <BaiTapGioHangRedux /> */}
-      <DemoPureComponent />
+      {/* <DemoPureComponent /> */}
+      <ContextDemo/>
     </div>
   );
 }
