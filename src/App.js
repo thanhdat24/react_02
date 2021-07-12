@@ -1,6 +1,7 @@
 import "./App.css";
 
-import ContextDemo from "./ContextDemo/ContextDemo";
+import ExContextModelList from "./ExContextModelList/ExContextModelList";
+// import ContextDemo from "./ContextDemo/ContextDemo";
 // import BaiTapGioHangRedux from "./BaiTapGioHangRedux/BaiTapGioHangRedux";
 // import DemoPureComponent from "./DemoPureComponent/DemoPureComponent";
 // import DanhSachSanPham from "./Props/DanhSachSanPham";
@@ -25,7 +26,8 @@ function App() {
 
       {/* <BaiTapGioHangRedux /> */}
       {/* <DemoPureComponent /> */}
-      <ContextDemo/>
+      {/* <ContextDemo/> */}
+      <ExContextModelList />
     </div>
   );
 }
